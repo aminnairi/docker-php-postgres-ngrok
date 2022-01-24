@@ -6,16 +6,24 @@
 - [Docker](https://www.docker.com/)
 - [Docker Compose](https://docs.docker.com/compose/)
 
+## Token
+
+[Here](https://dashboard.ngrok.com/get-started/your-authtoken)
+
 ## Setup
 
 ```yaml
 # docker-compose.override.yaml
 services:
   postgres:
-    environment:
+    environment: &environment
       POSTGRES_PASSWORD: password
       POSTGRES_USER: user
       POSTGRES_DB: db
+  
+  php:
+    environment:
+      <<: *environment
 ```
 
 ```yaml
