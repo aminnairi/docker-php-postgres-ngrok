@@ -1,4 +1,4 @@
-# docker-php-ngrok
+# docker-php-postgres-ngrok
 
 ## Requirements
 
